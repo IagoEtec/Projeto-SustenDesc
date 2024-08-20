@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
     const addProductButton = document.getElementById('addProduct');
     const submitProductButton = document.getElementById('submitProduct');
     const productFields = document.getElementById('productFields');
@@ -9,22 +7,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const educationalIdeas = document.getElementById('educationalIdeas');
     const communityIdeas = document.getElementById('communityIdeas');
 
-    function showSection(id) {
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            section.style.display = section.id === id ? 'block' : 'none';
-        });
-    }
-
     function addProductField() {
         const fieldCount = productFields.children.length;
         if (fieldCount < 6) { // Permite até 6 campos (1 original + 5 adicionais)
-            const newField = document.createElement('input');
-            newField.type = 'text';
-            newField.name = 'product';
-            newField.placeholder = 'Exemplo: garrafa PET';
-            newField.style.marginBottom = '10px';
+            const newField = document.createElement('div');
+            newField.className = 'product-field';
+            newField.innerHTML = `
+                <input type="text" name="product" placeholder="Exemplo: garrafa PET">
+                <button type="button" class="removeProduct">Remover</button>
+            `;
             productFields.appendChild(newField);
+
+            // Adiciona o evento de clique ao botão de remover
+            newField.querySelector('.removeProduct').addEventListener('click', function() {
+                productFields.removeChild(newField);
+            });
         }
     }
 
@@ -69,11 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     communityIdeas.innerHTML += '<li>Doe para organizações de caridade. Contribua com roupas para pessoas necessitadas.</li>';
                     break;
                 case 'móveis':
-                    homeIdeas.innerHTML += '<li>Reformar móveis antigos. Pinte e restaure móveis antigos para uso em casa.</li>';
-                    homeIdeas.innerHTML += '<li>Transforme em novos objetos. Corte e modifique móveis antigos para criar novos objetos.</li>';
-                    extraIdeas.innerHTML += '<li>Venda móveis reciclados. Ofereça móveis reformados para venda.</li>';
-                    educationalIdeas.innerHTML += '<li>Use em projetos de design. Aprenda sobre design e renovação de móveis.</li>';
-                    communityIdeas.innerHTML += '<li>Doe para projetos comunitários. Contribua com móveis para pessoas em necessidade.</li>';
+                    homeIdeas.innerHTML += '<li>Reformar móveis antigos. Pinte ou recubra móveis para dar uma nova vida.</li>';
+                    homeIdeas.innerHTML += '<li>Transforme em peças decorativas. Desmonte móveis antigos e crie itens decorativos.</li>';
+                    extraIdeas.innerHTML += '<li>Venda móveis reformados. Ganhe dinheiro vendendo móveis que você reformou.</li>';
+                    educationalIdeas.innerHTML += '<li>Use em projetos de marcenaria. Aprenda técnicas de marcenaria com móveis antigos.</li>';
+                    communityIdeas.innerHTML += '<li>Doe para abrigos. Móveis em bom estado podem ajudar abrigos e ONGs.</li>';
                     break;
                 case 'latas':
                     homeIdeas.innerHTML += '<li>Crie lanternas. Faça lanternas decorativas usando latas.</li>';
@@ -83,24 +80,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     communityIdeas.innerHTML += '<li>Doe para projetos de arte comunitária. Ajude a criar arte usando latas recicladas.</li>';
                     break;
                 default:
-                    homeIdeas.innerHTML += '<li>Produto não listado. Considere outras formas de reutilização ou consulte uma fonte especializada.</li>';
+                    homeIdeas.innerHTML += `<li>Sem ideias específicas para ${product}.</li>`;
+                    extraIdeas.innerHTML += `<li>Sem ideias específicas para ${product}.</li>`;
+                    educationalIdeas.innerHTML += `<li>Sem ideias específicas para ${product}.</li>`;
+                    communityIdeas.innerHTML += `<li>Sem ideias específicas para ${product}.</li>`;
                     break;
             }
         });
 
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.display = 'block';
-        });
+        // Mostrar todas as seções
+        homeIdeas.style.display = 'block';
+        extraIdeas.style.display = 'block';
+        educationalIdeas.style.display = 'block';
+        communityIdeas.style.display = 'block';
     }
-
-    // Adiciona eventos
-    menuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('active');
-    });
 
     addProductButton.addEventListener('click', addProductField);
     submitProductButton.addEventListener('click', showIdeas);
 
-    // Inicializa exibindo a seção inicial
-    showSection('home');
+    // Evento para remover campos de produtos existentes
+    document.querySelectorAll('.removeProduct').forEach(button => {
+        button.addEventListener('click', function() {
+            productFields.removeChild(button.parentElement);
+        });
+    });
 });

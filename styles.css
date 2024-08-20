@@ -9,8 +9,14 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: #f0f0f0;
+    background-image: url(./papers.co-nd65-city-view-night-light-bw-dark-25-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+h1 {
+    color: white;
+}
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -21,7 +27,7 @@ body {
 footer {
     margin-top: auto;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: rgb(63, 63, 63);
     color: white;
     text-align: center;
 }
@@ -31,7 +37,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4CAF50;
+    background-color: rgb(63, 63, 63);
     padding: 10px;
     color: white;
 }
@@ -40,22 +46,19 @@ footer {
     font-size: 1.5em;
 }
 
-#menuToggle {
-    display: none; /* Oculta o menu toggle por padrão */
-}
-
-#mobileMenu {
+#mainMenu {
     display: flex;
-    flex-direction: column;
+    gap: 15px;
 }
 
-#mobileMenu.hidden {
-    display: none;
+#mainMenu a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Botões */
 button {
-    background-color: #4CAF50;
+    background-color: rgb(63, 63, 63);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -65,23 +68,32 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: rgb(63, 63, 63);
+    color: white;
 }
 
-/* Inputs */
+/* Inputs e Campos de Produto */
 input[type="text"] {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-bottom: 10px;
-    width: 100%;
+    width: calc(100% - 100px); /* Ajuste para caber o botão "Remover" */
+    display: inline-block;
+}
+
+.product-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 /* Seções de opções */
 .section {
     display: none;
     padding: 20px;
-    background-color: #e0ffe0;
+    background-color: rgb(63, 63, 63);
     margin-top: 20px;
     border-radius: 5px;
     text-align: left;
@@ -89,25 +101,10 @@ input[type="text"] {
 
 .section h2 {
     margin-top: 0;
+    color: white;
 }
 
 .section li {
     margin-bottom: 10px;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    #menuToggle {
-        display: block;
-    }
-
-    #mobileMenu.active {
-        display: flex;
-    }
-
-    #mobileMenu a {
-        padding: 10px;
-        color: white;
-        text-decoration: none;
-    }
+    color: white;
 }
