@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciclagem Inteligente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Sustendesc</div>
+        <button id="menuToggle">☰</button>
+        <nav id="mobileMenu" class="hidden">
+            <a href="#home">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Insira seus itens recicláveis</h1>
+        <div id="productFields">
+            <input type="text" name="product" placeholder="Exemplo: garrafa PET">
+        </div>
+        <div>
+            <button id="addProduct">Adicionar Item</button>
+            <button id="submitProduct">Finalizar</button>
+        </div>
+
+        <!-- Seções de opções de reciclagem -->
+        <div id="homeIdeas" class="section hidden"></div>
+        <div id="extraIdeas" class="section hidden"></div>
+        <div id="educationalIdeas" class="section hidden"></div>
+        <div id="communityIdeas" class="section hidden"></div>
+    </div>
+
+    <footer>
+        &copy; 2024 Sustendesc. Todos os direitos reservados.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* styles.css */
+
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+/* Menu */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+}
+
+#menuToggle {
+    display: none; /* Oculta o menu toggle por padrão */
+}
+
+#mobileMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+#mobileMenu.hidden {
+    display: none;
+}
+
+/* Botões */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Inputs */
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Seções de opções */
+.section {
+    display: none;
+    padding: 20px;
+    background-color: #e0ffe0;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.section li {
+    margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    #menuToggle {
+        display: block;
+    }
+
+    #mobileMenu.active {
+        display: flex;
+    }
+
+    #mobileMenu a {
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+    }
+}
