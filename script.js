@@ -40,16 +40,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'garrafa pet':
                     homeIdeas.innerHTML += '<li>Use como vaso para plantas. Corte a parte superior e decore.</li>';
                     homeIdeas.innerHTML += '<li>Transforme em suporte para canetas. Faça furos na tampa e adicione suas canetas.</li>';
-                    extraIdeas.innerHTML += '<li>Crie artesanato para venda. Use garrafas PET para fazer enfeites e brinquedos.</li>';
-                    educationalIdeas.innerHTML += '<li>Use em projetos escolares. Crie modelos de estruturas ou maquetes.</li>';
+                    homeIdeas.innerHTML += '<li>Faça um pegador de frutas em galhos altos. Corte em 4 partes o fundo da garrafa para fazer uma especie de garra, junte isso com um cabo de vassoura na parte onde coloca a tampa, e um elastico, para voce assim poder abrir e fechar a garra.</li>';
+                    extraIdeas.innerHTML += '<li>Crie artesanato para venda, como por exemplo brinquedos. Faça um barco de garrafa pet, assim execulte um corte na horizontal da garrafa deitada, pegue uma das metas, e a outra corte para fazer varios detalhes na carapassa do barco, e alem das velaz.</li>';
+                    extraIdeas.innerHTML += '<li>Capinhas e Revestimentos. Transforme garrafas PET em capinhas para celulares ou revestimentos para outros itens, combinando criatividade e funcionalidade.</li>';
+                    educationalIdeas.innerHTML += '<li>Use em projetos escolares. Utilize para colocar em diversas maquetes.</li>';
+                    educationalIdeas.innerHTML += '<li>Mini Jardins: Crie mini-jardins em garrafas PET cortadas, que podem ser usados para ensinar sobre o ciclo da água, o crescimento das plantas e a ecologia.</li>'
+                    educationalIdeas.innerHTML += '<li>História do Lixo. Crie uma linha do tempo ou um projeto sobre o impacto do lixo plástico no meio ambiente. Use garrafas PET para ilustrar a quantidade de plástico consumido e a necessidade de soluções sustentáveis.</li>';
                     communityIdeas.innerHTML += '<li>Distribua para projetos comunitários de jardinagem. Pode ser usado para plantar mudas.</li>';
+                    communityIdeas.innerHTML += '<li>Murais e Esculturas. Crie murais ou esculturas para decorar espaços públicos. As garrafas PET podem ser transformadas em obras de arte que embelezam a comunidade e transmitem mensagens sobre reciclagem e sustentabilidade.</li>';
+                    communityIdeas.innerHTML += '<li>Renda para Comunidades. Colabore com grupos locais para transformar garrafas PET em produtos que possam ser vendidos e gerar renda para projetos comunitários ou sociais.(Para ideias sobre oque fazer para vender pasta verificar a outra aba renda extra)</li>';
                     break;
                 case 'papelão':
                     homeIdeas.innerHTML += '<li>Faça caixas organizadoras. Dobre e cole o papelão para criar caixas de armazenamento.</li>';
                     homeIdeas.innerHTML += '<li>Crie divisórias para gavetas. Corte e ajuste o papelão para organizar gavetas.</li>';
+                    homeIdeas.innerHTML += '<li>Decoração de Interiores. Use papelão para criar itens de decoração para interiores, como painéis decorativos, prateleiras ou organizadores de parede.</li>';
+                    homeIdeas.innerHTML += '<li>Protetores de Móveis: Faça protetores de papelão para colocar sob os pés dos móveis para proteger o piso de arranhões ou marcas. Isso é especialmente útil se você está mudando móveis frequentemente.</li>';
+                    homeIdeas.innerHTML += '<li>Painéis de Isolamento: Construa painéis de papelão para isolamento temporário de janelas ou portas durante climas frios. Isso pode ajudar a manter o calor dentro de casa de forma temporária.</li>';
                     extraIdeas.innerHTML += '<li>Faça brinquedos reciclados. Monte brinquedos simples para crianças.</li>';
+                    extraIdeas.innerHTML += '<li>Porta-Retratos. Faça porta-retratos de papelão decorados, que podem ser vendidos em feiras de artesanato ou online. Adicione pinturas, texturas ou colagens para torná-los únicos.</li>';
+                    extraIdeas.innerHTML += '<li>Luminárias. Construa luminárias ou abajures usando papelão. Com um design criativo e acabamentos apropriados, elas podem se tornar itens de decoração atraentes.</li>';
+                    extraIdeas.innerHTML += '<li>Organizadores de Mesa. Produza organizadores para materiais de escritório, como suportes para canetas, documentos ou cartões. São úteis e podem ser vendidos como acessórios de escritório.</li>';
+                    extraIdeas.innerHTML += '<li>Cadernos e Pastas: Construa cadernos e pastas com capas de papelão. Adicione folhas recicladas e encaderne-os para criar produtos úteis para estudantes e profissionais.</li>';
                     educationalIdeas.innerHTML += '<li>Use em projetos de arte. Crie painéis ou molduras para exposições.</li>';
+                    educationalIdeas.innerHTML += '<li>Arte e Escultura. Faça esculturas ou projetos de arte com papelão para ensinar sobre técnicas de escultura e design. Isso pode incluir desde criações abstratas até reproduções de obras famosas.</li>';
+                    educationalIdeas.innerHTML += '<li>Flashcards. Faça flashcards de papelão para práticas de vocabulário, matemática ou outros tópicos, facilitando o estudo e a revisão.</li>';
+                    educationalIdeas.innerHTML += '<li>Maquetes de Geografia. Crie maquetes de paisagens, continentes, ou sistemas fluviais para ensinar sobre geografia. O papelão é ideal para construir montanhas, vales, e outros recursos naturais.</li>';
+                    educationalIdeas.innerHTML += '<li>Modelos de Estruturas. Construa modelos de estruturas arquitetônicas, como edifícios históricos ou pontes, para ajudar a entender engenharia e história.</li>';
+                    educationalIdeas.innerHTML += '<li>Experimentos de Física. Utilize papelão para construir modelos de máquinas simples, como alavancas e polias, para demonstrar princípios básicos da física.</li>';
                     communityIdeas.innerHTML += '<li>Doe para oficinas de artesanato. Pode ser usado para criar itens de decoração ou brinquedos.</li>';
+                    communityIdeas.innerHTML += '<li>Compostagem e Jardinagem: Use papelão como camada de cobertura no compostor para ajudar a controlar a umidade e adicionar carbono ao solo. Também pode ser utilizado como proteção contra ervas daninhas em hortas comunitárias.</li>';
+                    communityIdeas.innerHTML += '<li>Armazenamento e Organização. Ofereça caixas de papelão para ajudar famílias a organizar seus pertences, especialmente durante mudanças ou reorganizações.</li>';
+                    communityIdeas.innerHTML += '<li>Campanhas de Reciclagem: Organize campanhas para coletar e reciclar papelão, educando a comunidade sobre como separar e descartar corretamente o material.</li>';
                     break;
                 case 'vidro':
                     homeIdeas.innerHTML += '<li>Transforme em potes para armazenamento. Lave e reutilize vidros de alimentos para organizar alimentos secos.</li>';
